@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> PORTFOLIO</title>
+	<script src="https://kit.fontawesome.com/68dddb2bf2.js" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style >
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: sans-serif;
+		}
+	#sidebar{
+		position: fixed;
+		width:200px;
+		height:100%;
+		background-color: #202121;
+		
+		transition: all 500ms linear;
+		
+	}
+	#sidebar.active{
+		left:0px;
+	}
+	#sidebar a:hover {background-color: #999c97;
+		padding: 10px;
+		max-width: block;
+	}
+	#sidebar:hover  {
+  display: block;
+}
+
+
+
+	#sidebar ul li{
+		color:rgba(230,230,230,0.9);
+		list-style: none;
+		padding: 15px 10px;
+		border-bottom: 1px solid rgba(100,100,100,0.3);
+
+	}
+	#sidebar .toggle-btn{
+		position: absolute;
+		left: 230px;
+		top: 20px; 
+	}
+	#sidebar .toggle-btn span{
+		display: block;
+		width: 30px;
+		height: 5px;
+		background-color: #151719;
+		margin: 5px 0px; 
+	}
+
+	.sample{
+			background-color: #514e54;
+			height: 700px;
+
+		}
+		.h2{
+
+			color:white;
+			text-align: center;
+			font-size: 80px;
+
+
+		}
+		.h5{
+			text-align: center;
+			font-size: 40px;
+			color:white;
+		}
+		
+		.about{
+			
+			background-color: #f5e8e6;
+			height: 1000px;
+			
+		}
+		.aboutrow{
+			border-color:white;
+			width:30%;
+			height: 20px;
+			border: 1px groove black;
+		}
+		.about-side{
+			margin-left: 32%;
+			margin-top: -20px;
+			width: 65%;
+			height:200px;
+			color:black;
+			font-size: 15px;
+			background-color: white;
+			overflow: auto;
+		}
+		.h4{
+			text-align: center;
+			text-decoration: underline;
+			font-size: 30px;
+		}
+		.skill{
+			background-color: white;
+			color:black;
+			width: 60%;
+			margin-top: 5px;
+			content: 2;
+			z-index: -1;
+			font-size: 15px;
+		}
+		.box{
+			background-color: white;
+			color:black;
+			width: 35%;
+			margin-left: 62%;
+			margin-top: -120px;
+		}
+		.box1{
+			width: 30%;
+			margin-top:5px;
+			background-image: url(img-qa-blur.jpg);
+			height: 100px;
+			background-color: blue;
+			color:black;
+			border-color: brown;
+			margin-left: 5px;
+			overflow: scroll;
+		}
+		.box2{
+			width: 40%;
+			margin-left: 35%;margin-top: -20px;
+			height: 100px;
+			float: right;
+
+		}
+		.contact1{
+			background-color: #2e8066;
+		}
+		.contact{
+			
+			border:solid ;
+			width: 40%;
+			color:black;
+			margin-left: 300px;
+			margin-top: 10px;
+			background-color: #cedbd7;
+
+		}
+		.footer{
+			background-color: #010300;
+			color:#464a44;
+			padding: 10px;
+			text-align: center;
+			margin-top: 20px;
+		}
+		input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+	 </style>
+	
+	
+</head>
+<body>
+<div id ="sidebar">
+	<div class="toggle-btn" id="toggle-btn"target-type="toggle-btn"onclick="togglesidebar()">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div> 
+	<h1 style="text-align: center;color:white;"> MENU</h1>
+	<ul>
+		<li><a href="#Home"><i class="fas fa-home">Home</i></a></li>
+		<li> <a href="#About"><i class="far fa-address-card">About</i></a></li>
+		<li> <a href="#What i do"><i class="fas fa-signal">What i do</i></a></li>
+		<li> <a href="#Recent Work"><i class="fas fa-briefcase">Recent Work</i></a></li>
+		<li> <a href="#Contact"><i class="fas fa-envelope">Contact</i></a></li>
+
+
+	</ul>
+</div>
+<div class="sample">
+	<h2 id="Home" targettype="Home"></h2>
+	<div class="h2"> I am bibek <br> Designer + Developer<br></div>
+	<div style="border-color: black;max-width: 40%text-align:center;><i class="fal fa-grip-lines"></i></div>
+	<div class="h5"> I Build Awesome Web Apps </div>
+	
+</div>
+<div class="about">
+	<h2 id="About" targettype="About"></h2>
+       <div class="h4">About</div>
+       <div class="aboutrow"><i class="fas fa-image"></i></div>
+       <div class="about-side"><h4 style="text-align: center;font-size: 25px;"> Bibek pandey</h4><br> I am bibek pandey from butwal nepal and i would love to help you with your project .currently i do all relsted jobs and specialize in HTML/CSS3.I can build any website from huge dyanmic apps small static sites on any budget.see my work below..<br>
+       <button class="button"> Hire me</button> </div>
+       <h2 id="What i do" targettype="What i do"></h2>
+       <div class="h4"style="margin-top: 10px;"> What I Do</div>
+
+       <div class="skill"><h4 style="font-size: 20px; margin-left: 20px;"> Skills</h4>
+       	<ul>
+       	<li>Html</li>
+       	<div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+       	</div>
+       	<li>CSS</li>
+       		<div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">80%</div>
+       	</div>
+       	<li>Python</li>
+       		<div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+          	<li>Illustrator</li>
+       	<div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div>
+       	</div>
+       		<li>Photoshop</li>
+       	<div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+       	</div>
+       </ul> 
+       </div>
+       <div class="box">
+       	<h2>I Build Great Websites<br></h2>
+       	Being a full stack developer Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+       	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+       	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+       	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+       	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+       	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       </div>
+     <h2 id="Recent Work" targettype="Recent Work"></h2>
+<div class="h4"style="margin-top: 40px;"> Recent work</div>
+<div class="box1"> I am working at google and huwalli company and other it companies in buiding differnt kinds of websites . I am working on websites different colleges and schools.</div>
+<div class="box2">
+		<li> IT COMPANY</li>
+		<li> GOOGLE COMPANY</li>
+		<li> DIFFERENT CLZ WEBSITES</li>
+		<li> DESIGNER AT GOOGLE</li>
+       	
+</div>
+</div>
+<h2 id="Contact" targettype="Contact"></h2>
+<div class="contact1">
+<div class="contact"> <H1 style="text-align: center;">Contact</H1>
+	<form> 
+	 <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+    	<option value="australia">NEPAL</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+    <LABEL > REMARKS</LABEL>
+    <input type="text">
+    <input type="submit" value="Submit">
+
+
+
+
+
+  </form>
+  <label> ANY OTHER CONTACT</label>
+
+  <input type="text" name="search" placeholder="Search..">
+</div>
+</div>
+<div class="footer"> THANK YOU!!...</div>
+<div style="text-align: center;background-color: #161617; float: right; margin: 5px;" ><button id="Home"target-type="Home">RETURN</button></div>
+</body>
+</html>
